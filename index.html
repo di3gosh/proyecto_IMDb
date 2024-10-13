@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" alt="IMDb Logo"
+            id="imdb-logo">
+        <h1>Plataforma de Búsqueda de Películas</h1>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="search-section">
+            <h2>Busca tu película favorita</h2>
+            <input type="text" id="search-input" placeholder="Buscar película">
+            <button onclick="searchMovies()">Buscar</button>
+        </section>
+
+        <section id="filter-section">
+            <h3>Filtrar por Calificación</h3>
+            <input type="number" id="rating-filter" placeholder="Calificación mínima (0-10)" step="0.1">
+        </section>
+
+        <section id="movies-list">
+            <h3>Resultados</h3>
+            <div id="movies-container"></div>
+        </section>
+
+        <div id="pagination">
+            <button id="prev-btn" onclick="changePage(-1)">Anterior</button>
+            <button id="next-btn" onclick="changePage(1)">Siguiente</button>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>Diego Martínez, Desarrollador Fullstack</p>
+        <p>Contacto: diegosh_18@outlook.com</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
